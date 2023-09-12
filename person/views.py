@@ -16,7 +16,8 @@ class PersonApiView(APIView):
     # 1. List all
     def get(self, request):
 
-        persons = Person.objects.all()
+        # persons = Person.objects.all()
+        persons = Person.objects.all().order_by('id')
         serializer = PersonSerializer(persons, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 

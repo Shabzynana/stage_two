@@ -25,7 +25,7 @@ git clone https://github.com/shabzynana/stage_two.git
 2. Navigate to the project directory:
 
 ```
-cd my-django-api
+cd stage_two
 ```
 
 3. Install the dependencies:

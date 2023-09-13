@@ -21,7 +21,7 @@ MONGO_URI=your_mongodb_connection_string_here
 PORT=5000
 Start the server:
 npm start
-The API should now be running on http://localhost:5000.
+The API should now be running on http://localhost:8000.
 
 Usage
 Endpoints
@@ -86,10 +86,10 @@ Request Body:
 Remove a Person:
 DELETE /api/123456
 Demo
-The API is live at https://hngx-api-t0ox.onrender.com/api
+The API is live at https://stage-two-d2n3.onrender.com/api
 
 API documentation with examples here
 
 Version: 1.0.0
 License: MIT
-Author: Joy Okwudire
+Author: Adebiyi OLuwafemi

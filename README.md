@@ -8,8 +8,7 @@ This API provides CRUD (Create, Read, Update, Delete) operations for managing pe
 
 Before you begin, ensure you have met the following requirements:
 
-- Node.js and npm installed.
-- MongoDB server running and accessible.
+-a virtual environment
 
 ### Installation
 
@@ -24,13 +23,13 @@ git clone https://github.com/shabzynana/stage_two.git
 2. Navigate to the project directory:
 
 ```
-cd your-api
+cd my-django-api
 ```
 
 3. Install the dependencies:
 
 ```
-npm install
+pip install -r requirements.txt
 ```
 
 4. Configure environment variables by creating a .env file in the root directory with the following content:
@@ -43,10 +42,9 @@ PORT=5000
 5. Start the server:
 
 ```
-npm start
-```
+python manage.py runserver```
 
-The API should now be running on http://localhost:5000.
+The API should now be running on http://localhost:8000.
 
 ## Usage
 

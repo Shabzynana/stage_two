@@ -1,6 +1,8 @@
 # API Documentation
+API documentation with examples (https://documenter.getpostman.com/view/23522029/2s9YC4VCwy)
 
-This API provides CRUD (Create, Read, Update, Delete) operations for managing persons.
+
+This API provides CRUD operations.
 
 ## Getting Started
 
@@ -8,8 +10,7 @@ This API provides CRUD (Create, Read, Update, Delete) operations for managing pe
 
 Before you begin, ensure you have met the following requirements:
 
-- Node.js and npm installed.
-- MongoDB server running and accessible.
+-a virtual environment
 
 ### Installation
 
@@ -24,29 +25,32 @@ git clone https://github.com/shabzynana/stage_two.git
 2. Navigate to the project directory:
 
 ```
-cd your-api
+cd stage_two
 ```
 
 3. Install the dependencies:
 
 ```
-npm install
+pip install -r requirements.txt
 ```
 
 4. Configure environment variables by creating a .env file in the root directory with the following content:
 
 ```
-MONGO_URI=your_mongodb_connection_string_here
-PORT=5000
+SECRET_KEY=your_secret_key
+DB_NAME=database_name
+DB_USER=database_user
+DB_PASSWORD=database_password
+DB_HOST=database_host
 ```
 
 5. Start the server:
 
 ```
-npm start
+python manage.py runserver
 ```
 
-The API should now be running on http://localhost:5000.
+The API should now be running on http://localhost:8000.
 
 ## Usage
 
@@ -54,33 +58,26 @@ The API should now be running on http://localhost:5000.
 
 #### Create a New Person
 
-- **Endpoint:** POST /api/persons
+- **Endpoint:** POST /api
 - **Description:** Create a new person.
-- **Request Body:**
-  - name (string, required): The name of the person.
 
 #### Fetch Details of a Person
 
-- **Endpoint:** GET /api/persons/:id
-- **Description:** Fetch details of a person by their name or ID.
-- **Path Parameters:**
-  - id (string, required): The unique identifier of the person.
+- **Endpoint:** GET /api/:name
+- **Description:** Fetch details of a person by their name.
 
-#### Update Details of an Existing Person
 
-- **Endpoint:** PUT /api/persons/:id
+#### Update the details of an Existing Person
+
+- **Endpoint:** PUT /api/:id
 - **Description:** Update details of an existing person by their ID.
-- **Path Parameters:**
-  - id (string, required): The unique identifier of the person.
-- **Request Body:**
-  - name (string, required): The updated name of the person.
 
-#### Remove a Person
 
-- **Endpoint:** DELETE /api/persons/:id
-- **Description:** Remove a person by their ID.
-- **Path Parameters:**
-  - id (string, required): The unique identifier of the person.
+#### Delete a Person
+
+- **Endpoint:** DELETE /api/:id
+- **Description:** delete a person by their ID.
+
 
 ### Request Formats
 
@@ -90,61 +87,14 @@ The API should now be running on http://localhost:5000.
 ### Response Formats
 
 - All responses are in JSON format.
-- Successful responses have a `success` field set to true and include the requested data.
-- Error responses have a `success` field set to false and include an error message.
+- Successful responses return a JSON data
+- Error responses have a designated error response
 
-### Examples
-
-Here are some sample API usage scenarios:
-
-#### Create a New Person:
-
-```
-POST /api
-
-Request Body:
-{
-  "name": "John Doe"
-}
-```
-
-#### Fetch Details of a Person:
-
-```
-GET /api/123456
-GET /api/John Doe
-
-Response:
-{
-  "success": true,
-  "data": {
-    "_id": "123456",
-    "name": "John Doe"
-  }
-}
-```
-
-#### Update Details of an Existing Person:
-
-```
-PATCH /api/123456
-
-Request Body:
-{
-  "name": "Jane Doe"
-}
-```
-
-#### Remove a Person:
-
-```
-DELETE /api/123456
-```
 
 ## Demo
 
 The API is live at [https://stage-two-d2n3.onrender.com/api](https://stage-two-d2n3.onrender.com/api)
 
-API documentation with examples [here](https://documenter.getpostman.com/view/21871844/2s9YC32Zfm)
+API documentation with examples [here](https://documenter.getpostman.com/view/23522029/2s9YC4VCwy)
 
 - Author: Adebiyi Oluwafemi

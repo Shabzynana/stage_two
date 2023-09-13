@@ -64,7 +64,7 @@ The API should now be running on http://localhost:8000.
 #### Fetch Details of a Person
 
 - **Endpoint:** GET /api/:name
-- **Description:** Fetch details of a person by their name or ID.
+- **Description:** Fetch details of a person by their name.
 
 
 #### Update the details of an Existing Person
@@ -76,7 +76,7 @@ The API should now be running on http://localhost:8000.
 #### Delete a Person
 
 - **Endpoint:** DELETE /api/:id
-- **Description:** Remove a person by their ID.
+- **Description:** delete a person by their ID.
 
 
 ### Request Formats

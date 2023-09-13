@@ -5,6 +5,7 @@ This document provides detailed information on how to use the REST API for the "
 > LIVE API Endpoint are https://stage-two-d2n3.onrender.com/api
 >
 
+Please refer to this documentation for request/response formats, sample API usage.
 >
 >Link to **POSTMAN** documentation of this api https://documenter.getpostman.com/view/21871844/2s9YC32Zfm
 >

@@ -2,7 +2,7 @@
 API documentation with examples (https://documenter.getpostman.com/view/23522029/2s9YC4VCwy)
 
 
-This API provides CRUD (Create, Read, Update, Delete) operations for managing persons.
+This API provides CRUD operations.
 
 ## Getting Started
 

@@ -45,7 +45,8 @@ DB_HOST=database_host
 5. Start the server:
 
 ```
-python manage.py runserver```
+python manage.py runserver
+```
 
 The API should now be running on http://localhost:8000.
 
@@ -55,26 +56,24 @@ The API should now be running on http://localhost:8000.
 
 #### Create a New Person
 
-- **Endpoint:** POST /api/persons
+- **Endpoint:** POST /api
 - **Description:** Create a new person.
-- **Request Body:**
-  - name (string, required): The name of the person.
 
 #### Fetch Details of a Person
 
-- **Endpoint:** GET /api/persons/:name
+- **Endpoint:** GET /api/:name
 - **Description:** Fetch details of a person by their name or ID.
 
 
 #### Update the details of an Existing Person
 
-- **Endpoint:** PUT /api/persons/:id
+- **Endpoint:** PUT /api/:id
 - **Description:** Update details of an existing person by their ID.
 
 
 #### Delete a Person
 
-- **Endpoint:** DELETE /api/persons/:id
+- **Endpoint:** DELETE /api/:id
 - **Description:** Remove a person by their ID.
 
 
@@ -86,8 +85,8 @@ The API should now be running on http://localhost:8000.
 ### Response Formats
 
 - All responses are in JSON format.
-- Successful responses have a `success` field set to true and include the requested data.
-- Error responses have a `success` field set to false and include an error message.
+- Successful responses return a JSON data
+- Error responses have a designated error response
 
 
 ## Demo

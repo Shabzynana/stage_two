@@ -35,8 +35,11 @@ pip install -r requirements.txt
 4. Configure environment variables by creating a .env file in the root directory with the following content:
 
 ```
-MONGO_URI=your_mongodb_connection_string_here
-PORT=5000
+SECRET_KEY=your_secret_key
+DB_NAME=database_name
+DB_USER=database_user
+DB_PASSWORD=database_password
+DB_HOST=database_host
 ```
 
 5. Start the server:
@@ -59,26 +62,21 @@ The API should now be running on http://localhost:8000.
 
 #### Fetch Details of a Person
 
-- **Endpoint:** GET /api/persons/:id
+- **Endpoint:** GET /api/persons/:name
 - **Description:** Fetch details of a person by their name or ID.
-- **Path Parameters:**
-  - id (string, required): The unique identifier of the person.
 
-#### Update Details of an Existing Person
+
+#### Update the details of an Existing Person
 
 - **Endpoint:** PUT /api/persons/:id
 - **Description:** Update details of an existing person by their ID.
-- **Path Parameters:**
-  - id (string, required): The unique identifier of the person.
-- **Request Body:**
-  - name (string, required): The updated name of the person.
 
-#### Remove a Person
+
+#### Delete a Person
 
 - **Endpoint:** DELETE /api/persons/:id
 - **Description:** Remove a person by their ID.
-- **Path Parameters:**
-  - id (string, required): The unique identifier of the person.
+
 
 ### Request Formats
 
@@ -91,53 +89,6 @@ The API should now be running on http://localhost:8000.
 - Successful responses have a `success` field set to true and include the requested data.
 - Error responses have a `success` field set to false and include an error message.
 
-### Examples
-
-Here are some sample API usage scenarios:
-
-#### Create a New Person:
-
-```
-POST /api
-
-Request Body:
-{
-  "name": "John Doe"
-}
-```
-
-#### Fetch Details of a Person:
-
-```
-GET /api/123456
-GET /api/John Doe
-
-Response:
-{
-  "success": true,
-  "data": {
-    "_id": "123456",
-    "name": "John Doe"
-  }
-}
-```
-
-#### Update Details of an Existing Person:
-
-```
-PATCH /api/123456
-
-Request Body:
-{
-  "name": "Jane Doe"
-}
-```
-
-#### Remove a Person:
-
-```
-DELETE /api/123456
-```
 
 ## Demo
 

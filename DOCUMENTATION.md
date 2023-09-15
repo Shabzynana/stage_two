@@ -45,7 +45,7 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
-5. The API will be available locally at `http://localhost:5000`.
+5. The API will be available locally at `http://localhost:8000`.
 
 ---
 

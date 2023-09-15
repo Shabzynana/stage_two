@@ -58,12 +58,12 @@ The API provides the following endpoints for CRUD operations on the "Person" res
 
     * **`/api`**
 
-* **[Read All (List)](#read-a-person-by-name)**---
+* **[Read All (List)](#read-all-persons)**---
     Retrieving all persons in database [GET]
 
     * **`/api`**
 
-* **Read A Single Person**---
+* **[Read A Single Person](#read-a-person-by-name)**---
     Retrieving a specific person by name [GET]
     * **`/api/{name}`**
 

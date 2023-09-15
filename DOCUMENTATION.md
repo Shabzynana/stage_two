@@ -32,7 +32,7 @@ python -m venv project
 ```
 activate
 ```
-source pro/bin/activate
+source project/bin/activate
 ```
 
 3. **Install Requirements:**

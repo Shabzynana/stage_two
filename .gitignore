@@ -2,4 +2,4 @@
 __pycache__
 pro
 .env
-build_files.sh
+whitenoise==6.5.0
